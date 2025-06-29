@@ -2,13 +2,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NEXT_SKIP_TYPE_CHECKS=1 npx prisma generate && NEXT_SKIP_TYPE_CHECKS=1 next build",
+    "build": "cross-env NEXT_SKIP_TYPE_CHECKS=1 npx prisma generate && cross-env NEXT_SKIP_TYPE_CHECKS=1 next build",
     "start": "next start",
     "test": "jest",
     "test:ci": "jest --ci"
   },
   "dependencies": {
     "@prisma/client": "^5.11.0",
+    "cross-env": "^7.0.3",
     "next": "^15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
